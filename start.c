@@ -28,10 +28,11 @@ int main(int argc, char *argv[]) {
             switch (c) {
                 case 's': /* @server */
                     hasServerGetHostByName(optarg, target);
-                    printf("s: %s\n", optarg);
+                    // printf("s: %s\n", optarg);
                     break;
-                case 't':
+                case 't': /* trace */
                     printf("t\n");
+                    ngethostbyname_trace(target, "", 1);
                     break;
                 default:
                     ngethostbyname(target, "", 1);
@@ -41,6 +42,7 @@ int main(int argc, char *argv[]) {
         }
     } else {
         printf("target: %s\n", target);
+        /* default server */
         ngethostbyname(target, "", 1);
     }
 }

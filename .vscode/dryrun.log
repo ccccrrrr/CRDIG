@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ccrr/MYDIG'
+gcc start.c -o start
+make: Leaving directory '/home/ccrr/MYDIG'
+ 
